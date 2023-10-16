@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle - Login</title>
+    <link rel="stylesheet" href="../public/login.css">
+</head>
+<body>
+
+    <div class="login-box">
+        <h1>Login</h1>
+        <form>
+            <input type="text" id="login-input" placeholder="Usuário" name="usuario" required>
+            <input type="password" id="pass-input" placeholder="Senha" name="senha" required>
+            <input type="submit" id="login-button" onclick="logar(); return false"> 
+        </form>
+    </div>
+
+</body>
+</html>
+
+<script>
+
+function logar(){
+    var login = document.getElementById("login-input").value;
+    var senha = document.getElementById("pass-input").value;
+
+    if(login == "admin" && senha == "admin"){
+        alert('Efetuado com sucesso!');
+        location.href = "layout.html";
+    } else{
+        alert("Usuario ou senha incorretos");
+}    
+}
+
+</script>

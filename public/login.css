@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+/* CAIXA DE LOGIN */
+.login-box {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adicionando sombra */
+}
+
+/* FORMULARIO DE LOGIN */
+
+#login-form {
+    text-align: center;
+}
+
+#pass-input, #login-input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login-button {
+    width: 50%;
+    padding: 10px;
+    background-color: #0074D9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* HOVER DO BOTAO  */
+.login-button:hover {
+    background-color: #3e9aea;
+}

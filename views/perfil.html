@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Controle - Início </title>
+    <link rel="stylesheet" href="../public/perfil.css">
+    <script src="https://kit.fontawesome.com/3490cbca6b.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h1>Painel de Controle</h1>
+        <a href="./layout.html" class="menu-item">
+            <i class="fas fa-home"></i> Início
+        </a>
+        <a href="#" class="menu-item">
+            <i class="fas fa-user"></i> Perfil
+        </a>
+        <a href="#" class="menu-item">
+            <i class="fas fa-cog"></i> Configurações
+        </a>
+        <a href="#" class="menu-item">
+            <i class="fas fa-chart-bar"></i> Estatísticas
+        </a>
+        <a href="#" class="menu-item">
+            <i class="fas fa-envelope"></i> Mensagens
+        </a>
+        <a href="./addproduto.html" class="menu-item">
+            <i class="fas fa-add"></i> Adicionar Produto
+        </a>
+        <a id="sair" href="./login.html" class="menu-item">
+            <i class="fas fa-sign-out-alt"></i> Sair
+        </a>
+
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+
+        <div class="container">
+            <div id="container">
+                <div id="profile">
+                    <img src="../img/avatar.png" alt="Foto de perfil">
+                    <p>Carol Silva</p>
+                </div>
+        
+                <div id="switch" onclick="toggleMode()">
+                    <button></button>
+                    <span></span> 
+        
+                </div>
+        
+                <ul>
+                    <li>
+                        <a><h3>ID:&nbsp </h3>23243</a>
+                    </li>
+        
+                    <li>
+                        <a><h3>Nome:&nbsp</h3>Carol Silva</a>
+                    </li>
+        
+                    <li>
+                        <a><h3>Cargo:&nbsp</h3>Gerente</a>
+                    </li>
+                    <li>
+                        <a><h3>Senha:&nbsp</h3>******</a>
+                    </li>
+        
+                </ul>
+
+    </div>
+
+</body>
+
+</html>
