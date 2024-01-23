@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+Produtos
+
+{% endblock page_title %}
+
+{% block content %}
+<main class="container">
+  <h1>Produtos</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Título</th>
+        <th scope="col">Adicionado em</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for produto in produto_list %}
+        <tr>
+        <th scope="row">{{produto.pk}}</th>
+        <td scope="row">{{produto.name}}</td>
+        <td scope="row">{{produto.created_at}}</td>
+        <td scope="row">{{produto.preco}}</td>
+
+        <td>
+          <a href="#" class="btn btn-primary">Concluir</a>
+          <a href="#" class="btn btn-danger">Excluir</a>
+        </td>
+
+       </tr>
+
+
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+        <a href="{% url "produto_create" %}" class="btn btn-primary">+ Produto</a>
+
+</main>
+{% endblock content %}
