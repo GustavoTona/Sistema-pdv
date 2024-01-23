@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from produtos.views import ProdutoListView, ProdutoCreateView, ProdutoUpdateView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("", ProdutoListView.as_view(), name="produto_list"),
+    path("create", ProdutoCreateView.as_view(), name="produto_create"),
+    path("update/<int:pk>", ProdutoUpdateView.as_view(), name="produto_update"),
 ]
