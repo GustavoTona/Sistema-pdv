@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+Menu
+
+{% endblock page_title %}
+
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static "css/home.css" %}">
+<script src="https://kit.fontawesome.com/3490cbca6b.js" crossorigin="anonymous"></script>
+
+  <div class="container">
+    <h1>Menu</h1>
+    <div class="row">
+      <div class="service">
+        <i class="fa-regular fa-money-bill-1"></i>
+        <h2>Venda</h2>
+        <p>Crie e gerencie uma venda.</p>
+      </div>
+
+      <div class="service">
+        <i class="fa-solid fa-box-open"></i>
+        <h2>Caixa</h2>
+        <p>Abertura e fechamento de caixa.</p>
+      </div>
+
+      <div class="service">
+        <i class="fa-regular fa-user"></i>
+                <h2>Clientes</h2>
+        <p>Adicione e gerencie clientes.</p>
+      </div>
+
+      <div class="service">
+        <a  href="{% url "produto_list" %}">
+          <i class="fa-solid fa-layer-group"></i>
+        <h2>Estoque </h2>
+        <p>Adicione e controle o estoque.</p>
+
+        </a>
+      </div>
+
+      <div class="service">
+        <i class="fas fa-laptop-code"></i>
+        <h2>Calculadora </h2>
+        <p>Aplicativo de calculo.</p>
+      </div>
+
+      <div class="service">
+        <i class="fa-regular fa-file-lines"></i>
+        <h2>Historico</h2>
+        <p>Veja as vendas já concluída.</p>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+{% endblock content %}
+

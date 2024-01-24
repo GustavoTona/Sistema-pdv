@@ -18,6 +18,13 @@ class Produto(models.Model):
          blank=False,
       )
     
+    quantidade = models.CharField(
+        verbose_name="Quantidade",
+        max_length=5, #quantia max de caracter
+        null=True, #nao pode valores nulos 
+        blank= True, #nao pode deixar o espço em branco
+    )
+
     preco = models.CharField(
         verbose_name="Preço",
         max_length=50, #quantia max de caracter

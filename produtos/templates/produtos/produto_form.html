@@ -8,8 +8,14 @@ Adicionar Produtos
 
 {% block content %}
 
+{% if produto.pk %}
+<h1>Editar Produto</h1>
+{% else %}
+
+<h1>Novo Produto</h1>
+
+{% endif %}
 <main class="container">          
-  <h1>Adicionar Produto</h1>
 
 <form method="POST">
 {% csrf_token %} 
@@ -20,4 +26,5 @@ Adicionar Produtos
 </main>
 
 {% endblock content %}
+
 
