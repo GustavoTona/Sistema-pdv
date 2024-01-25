@@ -1,3 +1,5 @@
+## Sistema PDV
+
 Projeto ainda está sendo criado
 
 16/10 - Criar um projeto novo para colocar no portifolio 
@@ -11,3 +13,18 @@ Sistema PDV que registra vendas e controla abertura e fechamento de caixa para l
 
 Registra tarefa do dia facilitando o planejamento e produtividade. 
 
+# Features: 
+
+* Login / Register (Conta de funcionario e donos, podendo criar mais contas)
+* MenuSideBar (Contem mais formas de navegar pelo sistema)
+* Shortcut Menu (Navegue pelas feature mais rapido)
+* Clients (Adicionar e remover clientes )
+* Stock (Quantidade de produtos)
+* Products (Adicione e remova produtos)
+
+# FrameWorks 
+
+* Django
+* Sqlite
+* Crispy
+* Bootstrap 5.0 
