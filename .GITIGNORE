@@ -1,2 +1,3 @@
+*.delete
+.DS_store
 .env
-.delete
