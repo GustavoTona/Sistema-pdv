@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+Excluir Clientes
+
+{% endblock page_title %}
+
+
+{% block content %}
+<h1>Excluir cliente?</h1>
+
+<p>Você quer deletar o <strong>{{ cliente.primeiro_nome }}</strong>? </p>
+
+<form method="POST">
+{% csrf_token %}
+
+<button type="submi" class="btn btn-danger">Exluir</button>
+<a href="{% url "cliente_list"%}" class="btn btn-primary">Cancelar</a>
+</form>
+{% endblock content %}
+
