@@ -29,9 +29,7 @@ urlpatterns = [
     path("clientes/", ClienteListView.as_view(), name="cliente_list"), 
     path("create_cliente", ClienteCreateView.as_view(), name="cliente_create"),
     path("update_cliente/<int:pk>", ClienteUpdateView.as_view(), name="cliente_update"),
-    path("delete_cliente/<int:pk>", ClienteDeleteView.as_view(), name="cliente_delete"),
+    path("delete_cliente/<int:pk>", ClienteDeleteView.as_view(), name="cliente_delete")
 ]
-
-
 
     # path("clientes/", include('clientes.url')) #include para chamar o app clientes, import include
