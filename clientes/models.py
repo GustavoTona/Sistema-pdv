@@ -44,3 +44,5 @@ class Cliente(models.Model): #classe cliente, precisamos especificar o que tem d
         blank=False
         )
     
+    def __str__(self):
+        return f"{self.primeiro_nome} {self.sobrenome}"
