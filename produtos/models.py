@@ -31,3 +31,8 @@ class Produto(models.Model):
         null=False, #nao pode valores nulos 
         blank= False, #nao pode deixar o espço em branco
     )
+
+
+       
+    def __str__(self):
+        return f"{self.name} - {self.preco}"
