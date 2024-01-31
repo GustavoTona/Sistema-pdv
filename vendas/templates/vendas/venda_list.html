@@ -17,16 +17,16 @@
       </thead>
       <tbody>
   
-        {% for venda in venda_list %}
+        {% for vendaform in venda_list %}
           <tr>
           <th scope="row">{{venda.pk}}</th>
-          <td scope="row">{{venda.cliente}}</td>
-          <td scope="row">{{venda.produto}}</td>
-          <td scope="row">{{venda.preco}}</td>          
+          <td scope="row">{{vendaform.cliente}}</td>
+          <td scope="row">{{vendaform.produto}}</td>
+          <td scope="row">{{vendaform.preco}}</td>          
           <td scope="row">{{venda.venda_em}}</td>
           <td>
-            <a href="{% url "" %}" class="btn btn-secondary btn-sm">Editar</a>
-            <a href="{% url "" %}" class="btn btn-danger btn-sm">Excluir</a>
+            <a href="#" class="btn btn-secondary btn-sm">Editar</a>
+            <a href="#" class="btn btn-danger btn-sm">Excluir</a>
           </td>
   
          </tr>
@@ -37,7 +37,7 @@
     </table>
      
       
-        <a href="{% url "venda_create" %}" class="btn btn-primary">Adicionar um cliente</a>
+        <a href="#"class="btn btn-primary">Adicionar um cliente</a>
 
 {% endblock content %}
 

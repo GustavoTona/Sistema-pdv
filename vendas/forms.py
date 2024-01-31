@@ -1,39 +1,13 @@
-# seu_app/forms.py
-
-from django import forms
-from clientes.models import Cliente
-from produtos.models import Produto
-
-
-class ClienteFormulario(forms.Form):
-    cliente = forms.ModelChoiceField(
-        queryset=Cliente.objects.all(), 
-        empty_label=None
-    )
-
-    produto = forms.ModelChoiceField(
-        queryset=Produto.objects.all(), 
-        empty_label=None
-        
-    )
-
-    preco = forms.ModelChoiceField(
-        queryset=Produto.objects.all(), 
-        empty_label=None
-    )
-
-
-
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from .forms import ClienteFormulario
+from .models import VendaForm, Venda
 
      
 def ClienteDados(request):
-    form = ClienteFormulario()
+    form = VendaForm()
 
     if request.method == 'POST':
-        form = ClienteFormulario(request.POST)
+        form = VendaForm(request.POST)
         if form.is_valid():
             # Obtenha os dados do formulário
             cliente = form.cleaned_data['cliente']
