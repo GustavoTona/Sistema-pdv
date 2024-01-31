@@ -1,7 +1,7 @@
+from django.shortcuts import render
 
-from .models import Venda
-from django.views.generic import ListView
+# Create your views here.
 
 
-class VendaForm(ListView):
-    model = Venda
+def venda_list(request):
+    return render(request, "vendas/venda_list.html")
