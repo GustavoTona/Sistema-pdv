@@ -1,1 +1,47 @@
-<h1>Teste List</h1>
+{% extends "base.html" %}
+
+{% block page_title %}
+Produtos
+
+{% endblock page_title %}
+
+{% block content %}
+<main class="container">
+  <h1>Lista de Vendas</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Sobrenome</th>
+        <th scope="col">Produto</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for venda in venda_list %}
+        <tr>
+        <th scope="row">{{venda.pk}}</th>
+        <td scope="row">{{venda.primeiro_nome}}</td>
+        <td scope="row">{{venda.sobrenome}}</td>
+        <td scope="row">{{venda.nome_produto}}</td>
+        <td scope="row">{{venda.preco}}</td>
+
+        <td>
+          <a href="#" class="btn btn-secondary btn-sm">Editar</a>
+          <a href="#" class="btn btn-danger btn-sm">Excluir</a>
+        </td>
+
+       </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+        <a href="{% url "produto_create" %}" class="btn btn-primary">Realizar Venda</a>
+
+</main>
+{% endblock content %}

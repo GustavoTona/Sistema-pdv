@@ -1,5 +1,4 @@
 from django.db import models
-
 class Venda(models.Model):
      
      primeiro_nome = models.CharField( 
@@ -14,3 +13,5 @@ class Venda(models.Model):
      preco = models.CharField( 
           max_length=50
           )
+     
+
