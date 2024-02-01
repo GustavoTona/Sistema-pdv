@@ -13,9 +13,9 @@ Produtos
       <tr>
         <th scope="col">id</th>
         <th scope="col">Nome</th>
-        <th scope="col">Sobrenome</th>
+      
         <th scope="col">Produto</th>
-        <th scope="col">Preço</th>
+      
         <th scope="col">Ações</th>
       </tr>
     </thead>
@@ -24,14 +24,12 @@ Produtos
       {% for venda in venda_list %}
         <tr>
         <th scope="row">{{venda.pk}}</th>
-        <td scope="row">{{venda.primeiro_nome}}</td>
-        <td scope="row">{{venda.sobrenome}}</td>
-        <td scope="row">{{venda.nome_produto}}</td>
-        <td scope="row">{{venda.preco}}</td>
+        <td scope="row">{{venda.cliente}}</td>
+        <td scope="row">{{venda.produto}}</td>
 
         <td>
           <a href="#" class="btn btn-secondary btn-sm">Editar</a>
-          <a href="#" class="btn btn-danger btn-sm">Excluir</a>
+          <a href="{% url "venda_delete" pk=venda.pk %}" class="btn btn-danger btn-sm">Excluir</a>
         </td>
 
        </tr>
@@ -41,7 +39,7 @@ Produtos
   </table>
 
 
-        <a href="{% url "produto_create" %}" class="btn btn-primary">Realizar Venda</a>
+        <a href="{% url "vendas_create" %}" class="btn btn-primary">Realizar Venda</a>
 
 </main>
 {% endblock content %}

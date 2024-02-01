@@ -1,12 +1,22 @@
-<html>
-<head>
-    <title>Menu Dropdown</title>
-</head>
-<body>
-    <form method="post">
+{% extends "base.html" %}
+
+{% block page_title %}
+Produtos
+
+{% endblock page_title %}
+
+{% block content %}
+<main class="container">
+  <h1>Realizar Venda</h1>
+
+    <form method="post" action="">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Enviar</button>
+        <input type="submit" name="salvar" class="btn btn-primary" value="Criar Venda">
+        <a href="{% url "venda_list" %}" class="btn btn-secondary">Voltar</a>
     </form>
-</body>
-</html>
+
+</main>
+
+{% endblock %}
+

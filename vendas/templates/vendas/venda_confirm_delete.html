@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>Excluir produto?</h1>
+
+<p>Você quer deletar o <strong>{{ venda.produto }}</strong>? </p>
+
+<form method="POST">
+{% csrf_token %}
+
+<button type="submi" class="btn btn-danger">Exluir</button>
+<a href="{% url "venda_list" %}" class="btn btn-primary">Cancelar</a>
+</form>
+{% endblock content %}
+

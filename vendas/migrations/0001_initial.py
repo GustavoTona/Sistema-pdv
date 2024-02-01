@@ -2,6 +2,9 @@
 
 from django.db import migrations, models
 
+def set_default_preco(apps, schema_editor):
+    Venda = apps.get_model('seu_app', 'Venda')
+    Venda.objects.filter(preco__isnull=True).update(preco=0.0)
 
 class Migration(migrations.Migration):
 
@@ -22,3 +25,4 @@ class Migration(migrations.Migration):
             ],
         ),
     ]
+
