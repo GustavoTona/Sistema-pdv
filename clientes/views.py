@@ -21,4 +21,4 @@ class ClienteUpdateView(UpdateView):
 
 class ClienteDeleteView(DeleteView):
     model = Cliente
-    success_url = reverse_lazy ("cliente_list")
+    success_url = reverse_lazy ("cliente_list") #retornar ao inicio 
