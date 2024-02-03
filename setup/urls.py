@@ -14,10 +14,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.shortcuts import render
 from django.contrib import admin
 from django.urls import path, include
-from vendas.views import VendaListView, ClienteDados
+
+from vendas.views import VendaListView, VendaDeleteView, minha_view
+
 from clientes.views import ClienteListView, ClienteCreateView, ClienteUpdateView, ClienteDeleteView
 from produtos.views import ProdutoListView, ProdutoCreateView, ProdutoUpdateView, ProdutoDeleteView, home
 
@@ -27,13 +30,18 @@ urlpatterns = [
     path("create_produto", ProdutoCreateView.as_view(), name="produto_create"),
     path("update/<int:pk>", ProdutoUpdateView.as_view(), name="produto_update"),
     path("delete/<int:pk>", ProdutoDeleteView.as_view(), name="produto_delete"),
+
     path("", home, name="inicio"), #name cria uma rota para ser puxada, exemplo inicio
+
     path("clientes/", ClienteListView.as_view(), name="cliente_list"), 
     path("create_cliente", ClienteCreateView.as_view(), name="cliente_create"),
     path("update_cliente/<int:pk>", ClienteUpdateView.as_view(), name="cliente_update"),
     path("delete_cliente/<int:pk>", ClienteDeleteView.as_view(), name="cliente_delete"),
+    
     path("vendas", VendaListView.as_view(), name="venda_list"),
-    path("create_venda/", ClienteDados, name="venda_create" )
+    path('vendas_create', minha_view, name='vendas_create'),
+    path("delete_venda/<int:pk>", VendaDeleteView.as_view(), name="venda_delete")
+
 ]
 
     # path("clientes/", include('clientes.url')) #include para chamar o app clientes, import include
