@@ -25,7 +25,7 @@ class Produto(models.Model):
         blank= True, #nao pode deixar o espço em branco
     )
 
-    preco = models.CharField(
+    preco = models.IntegerField(
         verbose_name="Preço",
         max_length=50, #quantia max de caracter
         null=False, #nao pode valores nulos 
@@ -33,6 +33,5 @@ class Produto(models.Model):
     )
 
 
-       
     def __str__(self):
-        return f"{self.name} - {self.preco}"
+        return f"{self.name}: R${self.preco}"
