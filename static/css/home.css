@@ -51,12 +51,11 @@
  
 }
 
-.service > a {  /* remover a selecao do link a  */
+a {  
 	color: currentColor;
-	display: inline-block;  /* IE11/ MS Edge bug */
+	display: inline-block; 
 	text-decoration: none;
   }
-
 
 .service i {
 	font-size: 40px;

@@ -19,6 +19,8 @@ from django.shortcuts import render
 from django.contrib import admin
 from django.urls import path, include
 
+from dashboard.views import dashboard
+
 from vendas.views import VendaListView, VendaDeleteView, minha_view
 
 from clientes.views import ClienteListView, ClienteCreateView, ClienteUpdateView, ClienteDeleteView
@@ -40,7 +42,9 @@ urlpatterns = [
     
     path("vendas", VendaListView.as_view(), name="venda_list"),
     path('vendas_create', minha_view, name='vendas_create'),
-    path("delete_venda/<int:pk>", VendaDeleteView.as_view(), name="venda_delete")
+    path("delete_venda/<int:pk>", VendaDeleteView.as_view(), name="venda_delete"),
+
+    path('dashboard', dashboard, name='dashboard')
 
 ]
 
