@@ -13,9 +13,7 @@ Produtos
       <tr>
         <th scope="col">id</th>
         <th scope="col">Nome</th>
-      
         <th scope="col">Produto</th>
-      
         <th scope="col">Ações</th>
       </tr>
     </thead>
@@ -28,7 +26,6 @@ Produtos
         <td scope="row">{{venda.produto}}</td>
 
         <td>
-          <a href="#" class="btn btn-secondary btn-sm">Editar</a>
           <a href="{% url "venda_delete" pk=venda.pk %}" class="btn btn-danger btn-sm">Excluir</a>
         </td>
 
