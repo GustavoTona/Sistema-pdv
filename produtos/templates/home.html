@@ -14,19 +14,20 @@ Menu
   <div class="container">
     <h1>Menu</h1>
     <div class="row">
+      <div class="service">
       <a  href="{% url "venda_list" %}">
-          <div class="service">
           <i class="fa-regular fa-money-bill-1"></i>
          <h2>Venda</h2>
           <p>Crie e gerencie uma venda.</p>
+        </a>
+        </div>
+      <a  href="{% url "dashboard" %}">   
+        <div class="service">
+          <i class="fa-solid fa-chart-line"></i>
+          <h2>DashBoard</h2>
+          <p>Indicadores e métricas</p>
         </div>
       </a>
-      <div class="service">
-        <i class="fa-solid fa-box-open"></i>
-        <h2>Caixa</h2>
-        <p>Abertura e fechamento de caixa.</p>
-      </div>
-
       <div class="service">
         <a  href="{% url "cliente_list" %}">
         <i class="fa-regular fa-user"></i>
