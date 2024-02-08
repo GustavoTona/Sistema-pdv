@@ -1,0 +1,68 @@
+{% block content %}
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        {% load static %}
+<link rel="stylesheet" href="{% static "css/cadastro.css" %}">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./form/style/style.css">
+        <link rel="shortcut icon" href="./home/img/icon.png" type="image/x-icon">
+        <title>Create Account - Login V.2</title>
+    </head>
+
+    <body>
+
+        <div class="main-login">
+            <form action="">
+                <div class="card-login">
+
+                    <h1>Criar Conta</h1>
+        
+                    <div class="input-box">
+                        <label for="lastname">Primeiro nome</label>
+        
+                        <input id="firstname" type="text" name="firstname" placeholder="First name" required>
+                    </div>
+        
+                    <div class="input-box">
+                        <label for="lastname">Sobrenome</label>
+        
+                        <input id="lastname" type="text" name="lastname" placeholder="Last name" required>
+                    </div>
+        
+                    <div class="input-box">
+                        <label for="lastname">E-mail</label>
+        
+        
+                        <input id="lastname" type="email" name="email" placeholder="E-mail" required>
+                    </div>
+        
+                    <div class="input-box">
+                        <label for="number">Telefone</label>
+        
+                        <input id="number" type="number" name="number" placeholder="(xx) xxxx-xxxx" required>
+                    </div>
+        
+                    <div class="input-box">
+                        <label for="number">Senha</label>
+        
+                        <input id="password" type="password" name="number" placeholder="Password" required>
+                    </div>
+                        <button class="btn-create">Criar conta</button>
+                        <a class="iHave" href="./index.html">Eu já tenho uma conta.</a>
+                    </div>
+
+            </form>
+        </div>
+
+       
+
+    </body>
+
+    </html>
+
+{% endblock content %}
