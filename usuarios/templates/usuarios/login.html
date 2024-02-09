@@ -6,7 +6,7 @@
 
 <head>
     {% load static %}
-<link rel="stylesheet" href="{% static "css/login.css" %}">
+    <link rel="stylesheet" href="{% static "css/login.css" %}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,33 +17,34 @@
 </head>
 
 <body>
+    
     <div class="main-login">
-
-        <div class="left-login">
-            <h1>Sistema PDV<br>Entre para gerenciar.</h1>
-        </div>
-
-        <div class="right-login">
-            <div class="card-login">
-
-                <h1>Login</h1>
-
-                <div class="textfield">
-                    <label for="user">Usuario:</label>
-                    <input id= "user" type="text" name="user" placeholder="User">
-                </div>
-
-                <div class="textfield">
-                    <label for="Password">Senha:</label>
-                    <input id="password" type="password" name="password" placeholder="Password">
-                </div>
-                <button type= "submit" onclick="logar(); return false" class="btn-login">Login</button>
-
-                <a href="./form.html" id="create">Criar sua conta</a>
-
+        
+            <div class="left-login">
+                <h1>Sistema PDV<br>Entre para gerenciar.</h1>
             </div>
-        </div>
 
+            <div class="right-login">
+                <div class="card-login">
+                    <form action="{%url "login"%}" method="POST">{% csrf_token %}
+                        <h1>Login</h1>
+
+                        <div class="textfield">
+                            <label for="user">Usuario:</label>
+                            <input id= "user" type="text" name="usuario" placeholder="Usuario">
+                        </div>
+
+                        <div class="textfield">
+                            <label for="Password">Senha:</label>
+                            <input id="password" type="password" name="senha" placeholder="Senha">
+                        </div>
+                        <button class="btn-login">Logar</button>
+
+                        <a href="./form.html" id="create">Criar sua conta</a>
+                    </form>
+                </div>
+            </div>
+        </form>
     </div>
 
     <script src="./script.js"></script>
