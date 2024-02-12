@@ -10,12 +10,11 @@ class Venda(models.Model):
      produto = models.CharField( 
           max_length=50
           )
-     
-     preco = models.IntegerField(
-          max_length=50 
-          )  # Adicionando um campo para armazenar o preço
+
 
      cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
      produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
+     preco = models.DecimalField(max_digits=10, decimal_places=2, default=0) 
 
-
+def __str__(self):
+        return f"{self.cliente} - {self.produto}"
