@@ -7,8 +7,8 @@ from produtos.views import home # puxando a pagina inicio
 from django.contrib.auth.decorators import login_required #puxar na def para ver apenas logado
 # Create your views here.
 
-def cadastro (request):
-    if request.method =="GET":
+def cadastro (request): 
+    if request.method == "GET":
         return render (request, "usuarios/cadastro.html")
     else: #senao 
         username = request.POST.get("usuario") 
@@ -26,8 +26,6 @@ def cadastro (request):
             )
         user.save()
         return HttpResponse("Cadastrado com sucesso!")
-
-
 
 def login(request):
 
