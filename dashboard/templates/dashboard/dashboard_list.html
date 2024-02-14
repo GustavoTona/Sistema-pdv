@@ -18,7 +18,7 @@
                     <div class="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
                         <div class="flex justify-between mb-6">
                             <div>
-                                <div class="text-2xl font-semibold mb-1">13</div>
+                                <div class="text-2xl font-semibold mb-1">{{ total_vendas }}</div>
                                 <div class="text-sm font-medium text-gray-400">Pedidos Feitos</div>
                             </div>
                             <div class="dropdown">
@@ -38,7 +38,7 @@
                         <div class="flex justify-between mb-4">
                             <div>
                                 <div class="flex items-center mb-1">
-                                    <div class="text-2xl font-semibold">124</div>
+                                    <div class="text-2xl font-semibold">{{ total_clientes }}</div>
                                     <div class="p-1 rounded bg-emerald-500/10 text-emerald-500 text-[12px] font-semibold leading-none ml-2">+30%</div>
                                 </div>
                                 <div class="text-sm font-medium text-gray-400">Clientes</div>
@@ -48,13 +48,13 @@
                             </div>
                         </div>
                         <div class="flex items-center">
-                            <a href="#" class="text-blue-500 font-medium text-sm hover:text-blue-600">Ver Detalhes</a>
+                            <a href="{% url "cliente_list" %}" class="text-blue-500 font-medium text-sm hover:text-blue-600">Ver Detalhes</a>
                         </div>
                     </div>
                     <div class="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
                         <div class="flex justify-between mb-6">
                             <div>
-                                <div class="text-2xl font-semibold mb-1"><span class="text-base font-normal text-gray-400 align-top">&dollar;</span>6.345,30</div>
+                                <div class="text-2xl font-semibold mb-1"><span class="text-base font-normal text-gray-400 align-top">&dollar;</span>{{ faturamento_vendas }}</div>
                                 <div class="text-sm font-medium text-gray-400">Faturamento</div>
                             </div>
                             <div class="dropdown">
@@ -74,20 +74,17 @@
                                         <th scope="col">Nome</th>
                                         <th scope="col">Produto</th>
                                         <th scope="col">Preço</th>
-                                        <th scope="col">Ações</th>
                                       </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                        <th scope="row">1</th>
-                                        <td scope="row">Gustavo Tona</td>
-                                        <td scope="row">Macbook Pro</td>
-                                        <td scope="row">2.500,00</td>
-                                        <td>
-                                          <a href="" class="btn btn-danger btn-sm">Cancelar</a>
-                                          <a href="" class="btn btn-secondary btn-sm">Concluir</a>
-                                        </td>
-                                       </tr>
+                                        {% for venda in vendas %}
+                                            <tr>
+                                                <th scope="row">{{venda.pk}}</th>
+                                                <td scope="row">{{venda.cliente}}</td>
+                                                <td scope="row">{{venda.produto}}</td>
+                                                <td scope="row">{{venda.preco}}</td>
+                                            </tr>
+                                        {% endfor %}
                                 </tbody>
                             </table>
                         </div>
